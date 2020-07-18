@@ -11,6 +11,10 @@ combineTuple(liveData1, liveData2, liveData3)
     }
 ```
 
+## Why?
+
+It's useful when you want to combine multiple reactive streams together and get a combined object of the latest values, without defining an actual class with an actual name to do it.
+
 ## Using LiveData-CombineTuple-KT
 
 In order to use LiveData-CombineTuple-KT, you need to add `jitpack` to your project root `build.gradle.kts`
