@@ -48,7 +48,7 @@ and then, add the dependency to your module's `build.gradle.kts` (or `build.grad
 
 ``` kotlin
 // build.gradle.kts
-implementation("com.github.Zhuinden:livedata-combinetuple-kt:1.0.0")
+implementation("com.github.Zhuinden:livedata-combinetuple-kt:1.1.0")
 ```
 
 or
