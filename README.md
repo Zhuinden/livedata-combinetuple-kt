@@ -55,7 +55,7 @@ or
 
 ``` groovy
 // build.gradle
-implementation 'com.github.Zhuinden:livedata-combinetuple-kt:1.0.0'
+implementation 'com.github.Zhuinden:livedata-combinetuple-kt:1.1.0'
 ```
 
 ## License
