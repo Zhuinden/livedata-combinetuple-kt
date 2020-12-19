@@ -1,5 +1,12 @@
 # Change log
 
+-LiveData-CombineTuple-KT 1.2.0 (2020-12-19)
+--------------------------------
+
+- Update Kotlin to 1.4.21.
+
+- Update tuples-kt to 1.1.0.
+
 -LiveData-CombineTuple-KT 1.1.0 (2020-10-04)
 --------------------------------
 
