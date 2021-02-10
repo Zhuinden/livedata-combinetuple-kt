@@ -34,7 +34,7 @@ android {
 
 dependencies {
     //implementation(mapOf("dir" to "libs", "include" to listOf("*.jar")))
-    api("com.github.Zhuinden:tuples-kt:1.1.0")
+    api("com.github.Zhuinden:tuples-kt:1.1.1")
     api("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
 
     testImplementation("junit:junit:4.13.1")
