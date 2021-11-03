@@ -1,5 +1,9 @@
 # Change log
 
+-LiveData-CombineTuple-KT 1.3.0 (2021-11-03)
+--------------------------------
+- Add `combineTupleSkipNull`, which is probably what people always really wanted (has `null` until all values of all LiveData are not null).
+
 -LiveData-CombineTuple-KT 1.2.1 (2021-02-10)
 --------------------------------
 

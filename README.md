@@ -63,14 +63,14 @@ and then, add the dependency to your module's `build.gradle.kts` (or `build.grad
 
 ``` kotlin
 // build.gradle.kts
-implementation("com.github.Zhuinden:livedata-combinetuple-kt:1.2.1")
+implementation("com.github.Zhuinden:livedata-combinetuple-kt:1.3.0")
 ```
 
 or
 
 ``` groovy
 // build.gradle
-implementation 'com.github.Zhuinden:livedata-combinetuple-kt:1.2.1'
+implementation 'com.github.Zhuinden:livedata-combinetuple-kt:1.3.0'
 ```
 
 ## License
