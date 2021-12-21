@@ -10,7 +10,7 @@ fun <T1, T2> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>): LiveData<
     val v2 = f2.value
 
     if (v1 != null && v2 != null) {
-        mediator.value = Pair(v1, v2)
+        mediator.setValueIfNotEqual(Pair(v1, v2))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -18,7 +18,7 @@ fun <T1, T2> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>): LiveData<
         val v2 = f2.value
 
         if (v1 != null && v2 != null) {
-            mediator.value = Pair(v1, v2)
+            mediator.setValueIfNotEqual(Pair(v1, v2))
         }
     }
 
@@ -27,7 +27,7 @@ fun <T1, T2> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>): LiveData<
         val v2 = t2
 
         if (v1 != null && v2 != null) {
-            mediator.value = Pair(v1, v2)
+            mediator.setValueIfNotEqual(Pair(v1, v2))
         }
     }
 }
@@ -38,7 +38,7 @@ fun <T1, T2, T3> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3: Li
     val v3 = f3.value
 
     if (v1 != null && v2 != null && v3 != null) {
-        mediator.value = Triple(v1, v2, v3)
+        mediator.setValueIfNotEqual(Triple(v1, v2, v3))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -47,7 +47,7 @@ fun <T1, T2, T3> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3: Li
         val v3 = f3.value
 
         if (v1 != null && v2 != null && v3 != null) {
-            mediator.value = Triple(v1, v2, v3)
+            mediator.setValueIfNotEqual(Triple(v1, v2, v3))
         }
     }
 
@@ -57,7 +57,7 @@ fun <T1, T2, T3> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3: Li
         val v3 = f3.value
 
         if (v1 != null && v2 != null && v3 != null) {
-            mediator.value = Triple(v1, v2, v3)
+            mediator.setValueIfNotEqual(Triple(v1, v2, v3))
         }
     }
 
@@ -67,7 +67,7 @@ fun <T1, T2, T3> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3: Li
         val v3 = t3
 
         if (v1 != null && v2 != null && v3 != null) {
-            mediator.value = Triple(v1, v2, v3)
+            mediator.setValueIfNotEqual(Triple(v1, v2, v3))
         }
     }
 }
@@ -79,7 +79,7 @@ fun <T1, T2, T3, T4> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3
     val v4 = f4.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null) {
-        mediator.value = Tuple4(v1, v2, v3, v4)
+        mediator.setValueIfNotEqual(Tuple4(v1, v2, v3, v4))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -89,7 +89,7 @@ fun <T1, T2, T3, T4> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3
         val v4 = f4.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null) {
-            mediator.value = Tuple4(v1, v2, v3, v4)
+            mediator.setValueIfNotEqual(Tuple4(v1, v2, v3, v4))
         }
     }
 
@@ -100,7 +100,7 @@ fun <T1, T2, T3, T4> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3
         val v4 = f4.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null) {
-            mediator.value = Tuple4(v1, v2, v3, v4)
+            mediator.setValueIfNotEqual(Tuple4(v1, v2, v3, v4))
         }
     }
 
@@ -111,7 +111,7 @@ fun <T1, T2, T3, T4> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3
         val v4 = f4.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null) {
-            mediator.value = Tuple4(v1, v2, v3, v4)
+            mediator.setValueIfNotEqual(Tuple4(v1, v2, v3, v4))
         }
     }
 
@@ -122,7 +122,7 @@ fun <T1, T2, T3, T4> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>, f3
         val v4 = t4
 
         if (v1 != null && v2 != null && v3 != null && v4 != null) {
-            mediator.value = Tuple4(v1, v2, v3, v4)
+            mediator.setValueIfNotEqual(Tuple4(v1, v2, v3, v4))
         }
     }
 }
@@ -135,7 +135,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
     val v5 = f5.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-        mediator.value = Tuple5(v1, v2, v3, v4, v5)
+        mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -146,7 +146,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
         val v5 = f5.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-            mediator.value = Tuple5(v1, v2, v3, v4, v5)
+            mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
         }
     }
 
@@ -158,7 +158,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
         val v5 = f5.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-            mediator.value = Tuple5(v1, v2, v3, v4, v5)
+            mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
         }
     }
 
@@ -170,7 +170,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
         val v5 = f5.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-            mediator.value = Tuple5(v1, v2, v3, v4, v5)
+            mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
         }
     }
 
@@ -182,7 +182,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
         val v5 = f5.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-            mediator.value = Tuple5(v1, v2, v3, v4, v5)
+            mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
         }
     }
 
@@ -194,7 +194,7 @@ fun <T1, T2, T3, T4, T5> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData<T2>
         val v5 = t5
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null) {
-            mediator.value = Tuple5(v1, v2, v3, v4, v5)
+            mediator.setValueIfNotEqual(Tuple5(v1, v2, v3, v4, v5))
         }
     }
 }
@@ -208,7 +208,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
     val v6 = f6.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-        mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+        mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -220,7 +220,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = f6.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 
@@ -233,7 +233,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = f6.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 
@@ -246,7 +246,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = f6.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 
@@ -259,7 +259,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = f6.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 
@@ -272,7 +272,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = f6.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 
@@ -285,7 +285,7 @@ fun <T1, T2, T3, T4, T5, T6> combineTupleSkipNull(f1: LiveData<T1>, f2: LiveData
         val v6 = t6
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null) {
-            mediator.value = Tuple6(v1, v2, v3, v4, v5, v6)
+            mediator.setValueIfNotEqual(Tuple6(v1, v2, v3, v4, v5, v6))
         }
     }
 }
@@ -300,7 +300,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
     val v7 = f7.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-        mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+        mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -313,7 +313,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -327,7 +327,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -341,7 +341,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -355,7 +355,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -369,7 +369,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -383,7 +383,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = f7.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 
@@ -397,7 +397,7 @@ fun <T1, T2, T3, T4, T5, T6, T7> combineTupleSkipNull(f1: LiveData<T1>, f2: Live
         val v7 = t7
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null) {
-            mediator.value = Tuple7(v1, v2, v3, v4, v5, v6, v7)
+            mediator.setValueIfNotEqual(Tuple7(v1, v2, v3, v4, v5, v6, v7))
         }
     }
 }
@@ -413,7 +413,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
     val v8 = f8.value
     
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-        mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+        mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
     }
     
     mediator.addSource(f1) { t1: T1? ->
@@ -427,7 +427,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -442,7 +442,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -457,7 +457,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -472,7 +472,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -487,7 +487,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -502,7 +502,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -517,7 +517,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = f8.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 
@@ -532,7 +532,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8> combineTupleSkipNull(f1: LiveData<T1>, f2: 
         val v8 = t8
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null) {
-            mediator.value = Tuple8(v1, v2, v3, v4, v5, v6, v7, v8)
+            mediator.setValueIfNotEqual(Tuple8(v1, v2, v3, v4, v5, v6, v7, v8))
         }
     }
 }
@@ -549,7 +549,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
     val v9 = f9.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-        mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+        mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -564,7 +564,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -580,7 +580,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -596,7 +596,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -612,7 +612,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -628,7 +628,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -644,7 +644,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -660,7 +660,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -676,7 +676,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = f9.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 
@@ -692,7 +692,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9> combineTupleSkipNull(f1: LiveData<T1>, 
         val v9 = t9
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null) {
-            mediator.value = Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9)
+            mediator.setValueIfNotEqual(Tuple9(v1, v2, v3, v4, v5, v6, v7, v8, v9))
         }
     }
 }
@@ -710,7 +710,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
     val v10 = f10.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-        mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+        mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
     }
     
     mediator.addSource(f1) { t1: T1? ->
@@ -726,7 +726,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -743,7 +743,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -760,7 +760,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -777,7 +777,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -794,7 +794,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -811,7 +811,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -828,7 +828,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -845,7 +845,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -862,7 +862,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = f10.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 
@@ -879,7 +879,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> combineTupleSkipNull(f1: LiveData<
         val v10 = t10
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null) {
-            mediator.value = Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)
+            mediator.setValueIfNotEqual(Tuple10(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10))
         }
     }
 }
@@ -898,7 +898,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
     val v11 = f11.value
     
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-        mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+        mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -915,7 +915,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -933,7 +933,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -951,7 +951,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -969,7 +969,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -987,7 +987,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1005,7 +1005,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1023,7 +1023,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1041,7 +1041,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1059,7 +1059,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1077,7 +1077,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = f11.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 
@@ -1095,7 +1095,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> combineTupleSkipNull(f1: Live
         val v11 = t11
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null) {
-            mediator.value = Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11)
+            mediator.setValueIfNotEqual(Tuple11(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11))
         }
     }
 }
@@ -1115,7 +1115,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
     val v12 = f12.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-        mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+        mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
     }
     
     mediator.addSource(f1) { t1: T1? ->
@@ -1133,7 +1133,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1152,7 +1152,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1171,7 +1171,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1190,7 +1190,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1209,7 +1209,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1228,7 +1228,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1247,7 +1247,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1266,7 +1266,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1285,7 +1285,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1304,7 +1304,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1323,7 +1323,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = f12.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 
@@ -1342,7 +1342,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> combineTupleSkipNull(f1:
         val v12 = t12
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null) {
-            mediator.value = Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12)
+            mediator.setValueIfNotEqual(Tuple12(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12))
         }
     }
 }
@@ -1363,7 +1363,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
     val v13 = f13.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-        mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+        mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -1382,7 +1382,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1402,7 +1402,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1422,7 +1422,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1442,7 +1442,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1462,7 +1462,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1482,7 +1482,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1502,7 +1502,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1522,7 +1522,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1542,7 +1542,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1562,7 +1562,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1582,7 +1582,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1602,7 +1602,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = f13.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 
@@ -1622,7 +1622,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> combineTupleSkipNul
         val v13 = t13
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null) {
-            mediator.value = Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13)
+            mediator.setValueIfNotEqual(Tuple13(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13))
         }
     }
 }
@@ -1644,7 +1644,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
     val v14 = f14.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-        mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+        mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
     }
     
     mediator.addSource(f1) { t1: T1? ->
@@ -1664,7 +1664,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1685,7 +1685,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1706,7 +1706,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1727,7 +1727,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1748,7 +1748,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1769,7 +1769,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1790,7 +1790,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1811,7 +1811,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1832,7 +1832,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1853,7 +1853,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1874,7 +1874,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1895,7 +1895,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1916,7 +1916,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = f14.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 
@@ -1937,7 +1937,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> combineTupleSk
         val v14 = t14
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null) {
-            mediator.value = Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14)
+            mediator.setValueIfNotEqual(Tuple14(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14))
         }
     }
 }
@@ -1960,7 +1960,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
     val v15 = f15.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-        mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+        mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
     }
 
     mediator.addSource(f1) { t1: T1? ->
@@ -1981,7 +1981,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2003,7 +2003,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2025,7 +2025,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2047,7 +2047,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2069,7 +2069,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2091,7 +2091,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2113,7 +2113,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2135,7 +2135,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2157,7 +2157,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2179,7 +2179,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2201,7 +2201,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2223,7 +2223,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2245,7 +2245,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2267,7 +2267,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = f15.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 
@@ -2289,7 +2289,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> combineTu
         val v15 = t15
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null) {
-            mediator.value = Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15)
+            mediator.setValueIfNotEqual(Tuple15(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15))
         }
     }
 }
@@ -2313,7 +2313,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
     val v16 = f16.value
 
     if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-        mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+        mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
     }
     
     mediator.addSource(f1) { t1: T1? ->
@@ -2335,7 +2335,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2358,7 +2358,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2381,7 +2381,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2404,7 +2404,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2427,7 +2427,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2450,7 +2450,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2473,7 +2473,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2496,7 +2496,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2519,7 +2519,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2542,7 +2542,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2565,7 +2565,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2588,7 +2588,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2611,7 +2611,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2634,7 +2634,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2657,7 +2657,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = f16.value
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 
@@ -2680,7 +2680,7 @@ fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> comb
         val v16 = t16
 
         if (v1 != null && v2 != null && v3 != null && v4 != null && v5 != null && v6 != null && v7 != null && v8 != null && v9 != null && v10 != null && v11 != null && v12 != null && v13 != null && v14 != null && v15 != null && v16 != null) {
-            mediator.value = Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16)
+            mediator.setValueIfNotEqual(Tuple16(v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16))
         }
     }
 }
